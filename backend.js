@@ -1,73 +1,68 @@
-const zero = document.querySelector('.zero')
-const one = document.querySelector('.one')
-const two = document.querySelector('.two')
-const three = document.querySelector('.three')
-const four = document.querySelector('.four')
-const five = document.querySelector('.five')
-const six = document.querySelector('.six')
-const seven = document.querySelector('.seven')
-const eight = document.querySelector('.eight')
-const nine = document.querySelector('.nine')
-const  input =  document.querySelector('.inputSqr')
-const lpar = document.querySelector('.lpar')
-const rpar = document.querySelector('.rpar')
-const div = document.querySelector('.div')
-const multi = document.querySelector('.multi')
-const sub = document.querySelector('.sub')
-const add = document.querySelector('.add')
-const point = document.querySelector('.point')
-const eq = document.querySelector('.eq')
-const ce = document.querySelector('.ce')
-const del = document.querySelector('.del')
-
-// registering all the buttons and the input section
-
-
-const showing = function(x){
-    input.value += x.value
+"use strict";
+function proc(butt) {
+    input.value += butt.value;
+    input.style.color = `rgb(14, 100, 170)`;
 }
-// this function simplely will display each respective button character
-// in the input
-const result = function(){
-    {
-        try{input.value = eval(input.value)}catch{
-            alert('Please, use mathematical operations')
-            input.value = ''}}
-}
-// the function that calculates the operation and returns the result
-
-zero.addEventListener('click', ()=>showing(zero))
-one.addEventListener('click', ()=>showing(one))
-two.addEventListener('click', ()=>showing(two))
-three.addEventListener('click', ()=>showing(three))
-four.addEventListener('click', ()=>showing(four))
-five.addEventListener('click', ()=>showing(five))
-six.addEventListener('click', ()=>showing(six))
-seven.addEventListener('click', ()=>showing(seven))
-eight.addEventListener('click', ()=>showing(eight))
-nine.addEventListener('click', ()=>showing(nine))
-lpar.addEventListener('click', ()=>showing(lpar))
-rpar.addEventListener('click', ()=>showing(rpar))
-div.addEventListener('click', ()=>showing(div))
-multi.addEventListener('click', ()=>showing(multi))
-sub.addEventListener('click', ()=> showing(sub))
-add.addEventListener('click', ()=>showing(add))
-point.addEventListener('click', ()=>showing(point))
-// event listeners in the mainstream buttons 
-// they call the showing function 
-
-
-eq.addEventListener('click', ()=> result())
-input.addEventListener('keydown', function(pressing){
-    if(pressing.keyCode=== 13){
-        result()
+function resulting() {
+    try {
+        input.value = eval(input.value);
+        input.style.color = 'red';
     }
-})
-// they return the result while clicked or pressed (enter)
-
-del.addEventListener('click', ()=>{
-    input.value = String(input.value).slice(0,input.value.length -1)})
-// just deletes the last button character 
-
-ce.addEventListener('click', ()=>{input.value = ''})
-// clears the input completely
+    catch (err) {
+        alert('Please use valid mathimatical operations');
+        input.value = '';
+    }
+}
+function flooring() {
+    input.value = '';
+}
+function deleting() {
+    input.value = input.value;
+    // console.log(String(input.value).slice(input.value.length -1, input.value.length))
+    input.value = String(input.value).slice(0, input.value.length - 1);
+    input.style.color = `rgb(14, 100, 170)`;
+}
+const one = document.getElementById('one');
+const two = document.getElementById('two');
+const three = document.getElementById('three');
+const four = document.getElementById('four');
+const five = document.getElementById('five');
+const six = document.getElementById('six');
+const seven = document.getElementById('seven');
+const eight = document.getElementById('eight');
+const nine = document.getElementById('nine');
+const zero = document.getElementById('zero');
+const lpar = document.getElementById('lpar');
+const rpar = document.getElementById('rpar');
+const div = document.getElementById('div');
+const del = document.getElementById('del');
+const mult = document.getElementById('mult');
+const minus = document.getElementById('minus');
+const plus = document.getElementById('plus');
+const point = document.getElementById('point');
+const ce = document.getElementById('ce');
+const equal = document.getElementById('equal');
+const input = document.querySelector('#in');
+lpar.addEventListener('click', () => proc(lpar));
+rpar.addEventListener('click', () => proc(rpar));
+div.addEventListener('click', () => proc(div));
+del.addEventListener('click', () => deleting());
+mult.addEventListener('click', () => proc(mult));
+minus.addEventListener('click', () => proc(minus));
+plus.addEventListener('click', () => proc(plus));
+point.addEventListener('click', () => proc(point));
+ce.addEventListener('click', () => flooring());
+equal.addEventListener('click', () => resulting());
+one.addEventListener('click', () => proc(one));
+two.addEventListener('click', () => proc(two));
+three.addEventListener('click', () => proc(three));
+four.addEventListener('click', () => proc(four));
+five.addEventListener('click', () => proc(five));
+six.addEventListener('click', () => proc(six));
+seven.addEventListener('click', () => proc(seven));
+eight.addEventListener('click', () => proc(eight));
+nine.addEventListener('click', () => proc(nine));
+zero.addEventListener('click', () => proc(zero));
+input.addEventListener('keydown', function (press) { if (press.keyCode === 13) {
+    resulting();
+} });
