@@ -1,72 +1,77 @@
-:root{
-    --prop: 5rem;
-}
-*{
-    font-family: sans-serif
-}
 html{
-    background-color: rgb(47, 13, 42);
-    overflow: hidden;
+    background-color: rgb(71, 52, 65);
 }
 body{
-    margin: 5rem auto;
-    width: 26.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-main{
-    border: solid rgb(8, 155, 155) 1px ;
-    padding: 2rem;
-    padding-left: 2.63rem;
-    /* border-radius: 5%; */
-    background-color:rgb(25, 25, 25);
-    box-shadow: 3px 3px 10px 3px black;
+section{
+    margin-top: 4rem;
+    padding:2rem;
+    border: solid rgb(98, 102, 104) 2px;
+    background-color:rgb(42, 42, 42);
+    border-radius: 5%;
+    box-shadow: 3px 5px 10px black;
 }
-button{
-    width:var(--prop);
-    height: var(--prop);
-    margin:auto;
-    font-size: 2.2rem;
-    margin: 0rem 0rem 0.3rem 0.05rem;
-    color: cyan;
-    background-color: rgb(37, 37, 37);
-    border: transparent;
-    border-radius: 10%;
-    box-shadow: 3px 3px 10px 3px black;
-    transition: 250ms;
-}
-button:hover{
-    border-radius: 50%;
-    background-color: rgb(58, 58, 58);
-    color: rgb(117, 232, 232);
-}
+
 input{
+    width: 20.25rem;
+    height: 3.5rem;
     font-size: 2.5rem;
-    width: calc(var(--prop)*4 + 0.6rem);
-    height: 4rem;
-    margin-bottom: 2rem;
-    box-shadow: 3px 3px 10px 3px black;
-    border: transparent;
-    background-color: rgb(207, 207, 207);
-    color: rgb(0, 0, 0);
+    margin-bottom: 1.9rem;
+    box-shadow: 3px 5px 10px black;
+    border-radius: 2%;
+    border: solid rgb(70, 79, 81) 2px;
+    background-color: rgb(192, 192, 192);
+    color: rgb(14, 100, 170);
+    transition: 800ms;
+    overflow: scroll;
     text-align: right;
-    transition: 500ms;
 }
 input:hover{
-    transform: scale(200%);
-    background-color: rgb(151, 203, 191);
+    background-color: rgb(87, 197, 245);
+    color: rgb(24, 24, 24);
+    transform: scale(150%) rotate(-7deg);
+    border-radius: 2%;
+    box-shadow: 13px 15px 30px black;
 }
-.eq{
-    background-color: rgb(31, 98, 185);
-    color: rgb(0, 0, 0);
+
+button{
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    margin-bottom: 0.2rem;
+    padding:0rem;
+    background-color: rgb(53, 53, 53);
+    color: rgb(64, 198, 231);
+    border: 1px;
+    box-shadow: 3px 5px 10px black;
+    border-radius: 10%;
+    transition: 250ms;
+}
+
+button:hover{
+    cursor: cell;
+    background-color: rgb(70, 70, 70); 
+    color: rgb(128, 221, 244);
+    border-radius: 50%;
+    /* transform: rotate(180deg);  */
+
 }
 .del{
-    background-color: rgb(226, 1, 1);
-    color:rgb(0, 0, 0)
-}
-.eq:hover{
-    background-color: rgb(58, 122, 206);
-    color: black;
+    background-color: rgb(173, 2, 2);
 }
 .del:hover{
-    background-color: rgb(255, 11, 11);
-    color:rgb(0, 0, 0)
+    background-color: rgb(220, 0, 0);
+    color:rgb(20, 20, 20);
+}
+.equal{
+    background-color: rgb(7, 105, 147);
+    color:rgb(32, 32, 32)
+}
+.equal:hover{
+    background-color: rgb(11, 135, 188);
+    color:rgb(21, 20, 20);
 }
