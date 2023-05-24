@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel= "stylesheet" href = "style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <link rel = "stylesheet" href=" styleCalc.css">
+    <title>Document</title>
 </head>
 <body>
-    
-    <main class = "butts">
-        <input type = "text" class = "inputSqr" placeholder="0" value = ""><br>
-        <button class = "lpar" value = "(">(</button>
-        <button class = "rpar" value = ")">)</button>
-        <button class = "div" value = "/">/</button>
-        <button class = "multi" value = "*">x</button><br>
-        <button class = "seven" value="7">7</button>
-        <button class = "eight" value = "8">8</button>
-        <button class = "nine" value = "9">9</button>
-        <button class = "sub" value = "-">-</button><br>
-        <button class = "four" value = "4">4</button>
-        <button class = "five" value = "5">5</button>
-        <button class = "six" value = "6">6</button>
-        <button class = "add" value = "+">+</button><br>
-        <button class = "one" value = "1">1</button>
-        <button class = "two" value = "2">2</button>
-        <button class = "three" value = "3">3</button>
-        <button class = "del">del</button><br>
-        <button class = "zero" value = "0">0</button>
-        <button class = "point" value = ".">.</button>
-        <button class = "ce">ce</button>
-        <button class = "eq">=</button><br>
-    </main>
+    <section>
+        <input type = "text" placeholder="0" id = "in"><br>
+        <button id = "lpar" value = "("> (</button>
+        <button id = "rpar" value = ")"> )</button>
+        <button id = "div" value = "/"> /</button>
+        <button class = "del" id = "del" value = "..."> del</button><br>
+        <button id = "seven" value = "7"> 7</button>
+        <button id = "eight" value = "8"> 8</button>
+        <button id = "nine" value = "9"> 9</button>
+        <button id = "mult" value = "*"> x</button><br>
+        <button id = "four" value = "4"> 4</button>
+        <button id = "five" value = "5"> 5</button>
+        <button id = "six" value = "6"> 6</button>
+        <button id = "minus" value = "-"> -</button><br>
+        <button id = "one" value = "1"> 1</button>
+        <button id = "two" value = "2"> 2</button>
+        <button id = "three" value = "3"> 3</button>
+        <button id = "plus" value = "+"> +</button><br>
+        <button id = "zero" value = "0"> 0</button>
+        <button id = "point" value = "."> .</button>
+        <button id = "ce" value = "ce"> ce</button>
+        <button class = "equal" id = "equal" value = "="> =</button><br>
+    </section>
 </body>
-<script rel = "text" src = "backend.js"></script>
+<script rel = "text" src="script.js"></script>
 </html>
